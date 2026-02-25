@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VICTUS - Best Product Deals</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VICTUS provides honest reviews and best deals on smartphones, laptops, gadgets. Find your next purchase with confidence.">
+    <meta name="keywords" content="reviews, deals, affiliate, gadgets, smartphones, laptops, victus">
+    <meta name="author" content="VICTUS Team">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #0a2a66;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        nav[aria-label="Main navigation"] {
+            background: #133c8b;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav[aria-label="Main navigation"] a, nav[aria-label="Footer navigation"] a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav[aria-label="Main navigation"] a:hover, nav[aria-label="Footer navigation"] a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px 10px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .search-bar {
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .search-bar input {
+            padding: 8px;
+            width: 60%;
+            max-width: 350px;
+            border-radius: 4px;
+            border: 1px solid #aaa;
+            font-size: 16px;
+        }
+        .product {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.13);
+        }
+        .product h2 {
+            color: #0a2a66;
+            font-size: 1.3em;
+        }
+        .buy-btn {
+            display: inline-block;
+            padding: 10px 17px;
+            background: #ff6a00;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.2s;
+            font-size: 16px;
+        }
+        .buy-btn:hover {
+            background: #e65c00;
+        }
+        .product-details {
+            font-size: 1em;
+        }
+        .disclaimer {
+            background: #fff3cd;
+            padding: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #ffcc00;
+            font-size: 14px;
+        }
+        .contact-section {
+            background: #e9ecef;
+            padding: 20px 10px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+        .contact-section h3 {
+            margin-top: 0;
+        }
+        .contact-section p, .contact-section a {
+            font-size: 15px;
+        }
+        nav[aria-label="Footer navigation"] {
+            margin-top: 18px;
+            text-align: center;
+        }
+        nav[aria-label="Footer navigation"] a {
+            color: #fff;
+            margin: 0 8px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        footer {
+            background: #0a2a66;
+            color: white;
+            text-align: center;
+            padding: 17px 10px;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        @media (max-width: 650px) {
+            .container {
+                padding: 15px 3px;
+            }
+            .search-bar input {
+                width: 95%;
+                max-width: none;
+            }
+            .product {
+                padding: 10px 2px;
+            }
+            .contact-section {
+                padding: 13px 4px;
+            }
+        }
+    </style>
+
+    <script>
+        // Simple client-side search/filter for products
+        document.addEventListener('DOMContentLoaded', function() {
+            var searchInput = document.getElementById('searchInput');
+            if (!searchInput) return;
+            searchInput.addEventListener('input', function() {
+                let filter = searchInput.value.toLowerCase();
+                document.querySelectorAll('.product').forEach(function(product) {
+                    let txt = product.textContent.toLowerCase();
+                    product.style.display = txt.includes(filter) ? '' : 'none';
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>VICTUS</h1>
+    <p>Your Trusted Affiliate Product Review Website</p>
+</header>
+
+<nav aria-label="Main navigation">
+    <a href="#">Home</a>
+    <a href="#topdeals">Top Deals</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="disclaimer" role="alert">
+    <strong>Disclaimer:</strong> This website contains affiliate links. We may earn a commission when you buy through our links at no extra cost. Honest reviews only!
+</div>
+
+<div class="container">
+    <div class="search-bar">
+        <input id="searchInput" type="text" placeholder="Search products, reviews, deals..." aria-label="Search products">
+    </div>
+
+    <!-- PRODUCT LIST -->
+    <div class="product" id="topdeals">
+        <h2>Best Budget Smartphone 2026</h2>
+        <div class="product-details">
+            High performance smartphone with long battery life and great camera quality. Perfect for daily use.
+        </div>
+        <a class="buy-btn" href="YOUR_AFFILIATE_LINK_SMARTPHONE" target="_blank" rel="noopener">Buy Now</a>
+    </div>
+    <div class="product">
+        <h2>Top Gaming Laptop</h2>
+        <div class="product-details">
+            Powerful gaming laptop with fast processor, high graphics performance and smooth gameplay experience.
+        </div>
+        <a class="buy-btn" href="YOUR_AFFILIATE_LINK_LAPTOP" target="_blank" rel="noopener">View Deal</a>
+    </div>
+    <div class="product">
+        <h2>Best Wireless Earbuds</h2>
+        <div class="product-details">
+            Crystal clear sound, long battery backup and comfortable design for music lovers.
+        </div>
+        <a class="buy-btn" href="YOUR_AFFILIATE_LINK_EARBUDS" target="_blank" rel="noopener">Check Price</a>
+    </div>
+</div>
+
+<div class="container" id="contact">
+    <div class="contact-section" aria-labelledby="contact-title">
+        <h3 id="contact-title">Contact / Feedback</h3>
+        <p>Email us at <a href="mailto:info@victus.com">info@victus.com</a> for suggestions, partnership, or feedback!</p>
+    </div>
+</div>
+
+<nav aria-label="Footer navigation">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<footer>
+    <p>© 2026 VICTUS | Affiliate Product Review Website</p>
+</footer>
+
+</body>
+</html>
